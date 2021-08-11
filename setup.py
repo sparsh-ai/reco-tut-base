@@ -1,10 +1,16 @@
-from setuptools import find_packages, setup
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-setup(
-    name='code',
-    packages=find_packages(),
-    version='0.1.0',
-    description='Recommender System Tutorial',
-    author='recohut',
-    license='MIT',
-)
+import sys
+from pkg_resources import require, VersionConflict
+from setuptools import setup
+
+try:
+    require('setuptools>=38.3')
+except VersionConflict:
+    print("Error: version of setuptools is too old (<38.3)!")
+    sys.exit(1)
+
+
+if __name__ == "__main__":
+    setup(use_pyscaffold=True)
