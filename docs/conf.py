@@ -10,7 +10,8 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.mathjax',
               'sphinx.ext.githubpages',
               'IPython.sphinxext.ipython_console_highlighting',
-              'rst2pdf.pdfbuilder'
+              'rst2pdf.pdfbuilder',
+              'myst_parser',
 ]
 source_suffix = ['.rst', '.ipynb']
 templates_path = ['_templates']
@@ -19,6 +20,9 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 master_doc = 'index'
 pdf_documents = [('index', u'rst2pdf', u'Sample rst2pdf doc', u'Sparsh Agarwal'),]
+
+nbsphinx_allow_errors = True
+nbsphinx_execute = 'never'
 
 import os
 import sys
