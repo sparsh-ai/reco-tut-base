@@ -10,8 +10,6 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.mathjax',
               'sphinx.ext.githubpages',
               'IPython.sphinxext.ipython_console_highlighting',
-              'rst2pdf.pdfbuilder',
-              'myst_parser',
 ]
 source_suffix = ['.rst', '.ipynb']
 templates_path = ['_templates']
@@ -26,4 +24,4 @@ nbsphinx_execute = 'never'
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../src'))
+sys.path.insert(0, os.path.abspath('../../src'))
